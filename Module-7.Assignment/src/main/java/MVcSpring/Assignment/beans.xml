@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                           http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- Define the EmailService bean -->
+    <bean id="emailService" class="EmailService1"/>
+
+    <!-- Define the MessageProcessor bean with a reference to EmailService -->
+    <bean id="messageProcessor" class="MessageProcessor1">
+        <property name="messageService1" ref="emailService1"/>
+    </bean>
+</beans>

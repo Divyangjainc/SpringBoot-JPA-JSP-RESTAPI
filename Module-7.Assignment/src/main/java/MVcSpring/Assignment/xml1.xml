@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                           http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="student1" class="Student">
+        <property name="id" value="1"/>
+        <property name="fname" value="John"/>
+        <property name="lname" value="Doe"/>
+        <property name="email" value="john.doe@example.com"/>
+        <property name="mobile" value="1234567890"/>
+    </bean>
+
+    <bean id="student2" class="Student">
+        <property name="id" value="2"/>
+        <property name="fname" value="Jane"/>
+        <property name="lname" value="Smith"/>
+        <property name="email" value="jane.smith@example.com"/>
+        <property name="mobile" value="0987654321"/>
+    </bean>
+
+    <bean id="student3" class="Student">
+        <property name="id" value="3"/>
+        <property name="fname" value="Emily"/>
+        <property name="lname" value="Johnson"/>
+        <property name="email" value="emily.johnson@example.com"/>
+        <property name="mobile" value="1122334455"/>
+    </bean>
+
+    <bean id="student4" class="Student">
+        <property name="id" value="4"/>
+        <property name="fname" value="Michael"/>
+        <property name="lname" value="Brown"/>
+        <property name="email" value="michael.brown@example.com"/>
+        <property name="mobile" value="2233445566"/>
+    </bean>
+
+    <bean id="student5" class="Student">
+        <property name="id" value="5"/>
+        <property name="fname" value="Sarah"/>
+        <property name="lname" value="Davis"/>
+        <property name="email" value="sarah.davis@example.com"/>
+        <property name="mobile" value="3344556677"/>
+    </bean>
+
+    <bean id="studentList" class="java.util.ArrayList">
+        <constructor-arg>
+            <list>
+                <ref bean="student1"/>
+                <ref bean="student2"/>
+                <ref bean="student3"/>
+                <ref bean="student4"/>
+                <ref bean="student5"/>
+            </list>
+        </constructor-arg>
+    </bean>
+
+</beans>
